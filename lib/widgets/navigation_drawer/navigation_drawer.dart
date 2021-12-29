@@ -21,7 +21,19 @@ class NavigationDrawer extends StatelessWidget {
             icon: Icons.home,
             navigationPath: "home",
           ),
-          DrawerItem(title: "Jobs", icon: Icons.work, navigationPath: "jobs"),
+          // DrawerItem(title: "Jobs", icon: Icons.work, navigationPath: "jobs"),
+          DrawerItem(
+              title: "Destinations",
+              icon: Icons.location_on,
+              navigationPath: "destinations"),
+          DrawerItem(
+              title: "Experiences",
+              icon: Icons.emoji_emotions,
+              navigationPath: "experiences"),
+          DrawerItem(
+              title: "Iteneraries",
+              icon: Icons.travel_explore,
+              navigationPath: "iteneraries"),
           DrawerItem(title: "About", icon: Icons.info, navigationPath: "about"),
         ],
       ),
@@ -30,7 +42,7 @@ class NavigationDrawer extends StatelessWidget {
 }
 
 class NavigationDrawerHeader extends StatelessWidget {
-  const NavigationDrawerHeader({ Key? key }) : super(key: key);
+  const NavigationDrawerHeader({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -41,7 +53,11 @@ class NavigationDrawerHeader extends StatelessWidget {
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: const <Widget>[
-          Text("VISIT US NOW", style: TextStyle(fontSize: 18, fontWeight: FontWeight.w800, color: Colors.white)),
+          Text("VISIT US NOW",
+              style: TextStyle(
+                  fontSize: 18,
+                  fontWeight: FontWeight.w800,
+                  color: Colors.white)),
           Text("TAP HERE", style: TextStyle(color: Colors.white))
         ],
       ),
@@ -54,19 +70,24 @@ class DrawerItem extends StatelessWidget {
   final IconData icon;
   final String navigationPath;
 
-  const DrawerItem({Key? key, required this.title, required this.icon, required this.navigationPath})
+  const DrawerItem(
+      {Key? key,
+      required this.title,
+      required this.icon,
+      required this.navigationPath})
       : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Padding(
-        padding: const EdgeInsets.only(left: 50, top: 60),
-        child: Row(
-          children: [
-            Icon(icon),
-            const SizedBox(width: 30),
-            NavBarItem(title: title, navigationPath: navigationPath)
-          ],
-        ),);
+      padding: const EdgeInsets.only(left: 50, top: 60),
+      child: Row(
+        children: [
+          Icon(icon),
+          const SizedBox(width: 30),
+          NavBarItem(title: title, navigationPath: navigationPath)
+        ],
+      ),
+    );
   }
 }

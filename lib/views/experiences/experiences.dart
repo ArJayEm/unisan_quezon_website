@@ -21,6 +21,6 @@ class Experiences extends StatelessWidget {
         titlePrefix: "Create great",
         title: "Experiences",
         description:
-            "Experience great food experience and relaxing vacation spots.");
+            "Great food experience and relaxing vacation spots awaits you.");
   }
 }

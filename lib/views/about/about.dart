@@ -24,7 +24,7 @@ class _AboutState extends State<About> {
   Widget _details() {
     return const Details(
         titlePrefix: "Learn Our",
-        title: "HISTORY",
+        title: "History",
         description:
             "Unisan, originally called Kalilayan, is perhaps one of the oldest towns in the Philippines. As early as 1521, the town of Kalilayan was founded by Malayan settlers. All other towns in the country were established not earlier than 1565, when Spain formally occupied the Philippines as a colony.");
   }

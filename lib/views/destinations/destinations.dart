@@ -18,9 +18,9 @@ class Destinations extends StatelessWidget {
 
   Widget _details() {
     return const Details(
-        titlePrefix: "Explore the",
+        titlePrefix: "Explore lots of",
         title: "Destinations",
         description:
-            "Discover historical places or great places to just eat and relax.");
+            "Discover historical places or great places to just eat or relax.");
   }
 }

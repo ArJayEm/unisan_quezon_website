@@ -7,7 +7,7 @@ class Home extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    const String callToActionTitle = "Explore";
+    const String callToActionTitle = "Start exploring";
 
     return ScreenTypeLayout(
       mobile: Mobile(details: _details(), callToActionTitle: callToActionTitle),

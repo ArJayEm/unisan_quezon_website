@@ -5,6 +5,7 @@ import 'package:unisan_quezon_website/views/about/about.dart';
 import 'package:unisan_quezon_website/views/destinations/destinations.dart';
 import 'package:unisan_quezon_website/views/experiences/experiences.dart';
 import 'package:unisan_quezon_website/views/home/home.dart';
+import 'package:unisan_quezon_website/views/iteneraries/iteneraries.dart';
 import 'package:unisan_quezon_website/views/jobs/jobs.dart';
 
 Route<dynamic> generateRoute(RouteSettings settings) {
@@ -12,14 +13,14 @@ Route<dynamic> generateRoute(RouteSettings settings) {
     print('generateRoute: ${settings.name}');
   }
   switch (settings.name) {
-    case homeRoute:
-      return _getPageRoute(const Home());
     case jobsRoute:
       return _getPageRoute(const Jobs());
     case experiencesRoute:
       return _getPageRoute(const Experiences());
     case destinationsGoRoute:
       return _getPageRoute(const Destinations());
+    case itenerariesRoute:
+      return _getPageRoute(const Iteneraries());
     case aboutRoute:
       return _getPageRoute(const About());
     default:
