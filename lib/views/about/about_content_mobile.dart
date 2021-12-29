@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:unisan_quezon_website/widgets/call_to_action/call_to_action.dart';
-import 'package:unisan_quezon_website/views/home/home_details.dart';
+import 'package:unisan_quezon_website/views/about/about_details.dart';
 
-class HomeContentMobile extends StatelessWidget {
-  const HomeContentMobile({Key? key}) : super(key: key);
+class AboutContentMobile extends StatelessWidget {
+  const AboutContentMobile({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -13,7 +13,7 @@ class HomeContentMobile extends StatelessWidget {
       children: const <Widget>[
         Details(),
         SizedBox(height: 100),
-        CallToAction(title: "Explore")
+        CallToAction(title: "See Barangays")
       ],
     );
   }
