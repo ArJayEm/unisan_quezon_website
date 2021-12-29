@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 import 'package:unisan_quezon_website/widgets/details/details_style.dart';
 
-class Home extends StatelessWidget {
-  const Home({Key? key}) : super(key: key);
+class Destinations extends StatelessWidget {
+  const Destinations({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    const String callToActionTitle = "Explore";
+    const String callToActionTitle = "Take a tour";
 
     return ScreenTypeLayout(
       mobile: Mobile(details: _details(), callToActionTitle: callToActionTitle),
@@ -18,9 +18,9 @@ class Home extends StatelessWidget {
 
   Widget _details() {
     return const Details(
-        titlePrefix: "Welcome to",
-        title: "Unisan, Quezon",
+        titlePrefix: "Explore the",
+        title: "Destinations",
         description:
-            "Whether you're looking for an adventure, time to unwind, or have a great food experience, you can find them here.");
+            "Discover historical places or great places to just eat and relax.");
   }
 }

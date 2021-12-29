@@ -2,6 +2,8 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:unisan_quezon_website/routing/route_names.dart';
 import 'package:unisan_quezon_website/views/about/about.dart';
+import 'package:unisan_quezon_website/views/destinations/destinations.dart';
+import 'package:unisan_quezon_website/views/experiences/experiences.dart';
 import 'package:unisan_quezon_website/views/home/home.dart';
 import 'package:unisan_quezon_website/views/jobs/jobs.dart';
 
@@ -14,6 +16,10 @@ Route<dynamic> generateRoute(RouteSettings settings) {
       return _getPageRoute(const Home());
     case jobsRoute:
       return _getPageRoute(const Jobs());
+    case experiencesRoute:
+      return _getPageRoute(const Experiences());
+    case destinationsGoRoute:
+      return _getPageRoute(const Destinations());
     case aboutRoute:
       return _getPageRoute(const About());
     default:
@@ -22,14 +28,14 @@ Route<dynamic> generateRoute(RouteSettings settings) {
 }
 
 PageRoute _getPageRoute(Widget child) {
-  return _FadeRoute(
+  return FadeRoute(
     child: child,
   );
 }
 
-class _FadeRoute extends PageRouteBuilder {
+class FadeRoute extends PageRouteBuilder {
   final Widget child;
-  _FadeRoute({required this.child})
+  FadeRoute({required this.child})
       : super(
           pageBuilder: (
             BuildContext context,

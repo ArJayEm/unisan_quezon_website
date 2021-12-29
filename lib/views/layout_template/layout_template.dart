@@ -6,7 +6,6 @@ import 'package:unisan_quezon_website/routing/router.dart';
 import 'package:unisan_quezon_website/services/navigation_service.dart';
 import 'package:unisan_quezon_website/widgets/navigation/navigation_bar.dart'
     as nav;
-import 'package:unisan_quezon_website/widgets/centered_view.dart';
 import 'package:unisan_quezon_website/widgets/navigation_drawer/navigation_drawer.dart';
 
 class LayoutTemplate extends StatelessWidget {
@@ -16,7 +15,9 @@ class LayoutTemplate extends StatelessWidget {
   Widget build(BuildContext context) {
     return ResponsiveBuilder(
       builder: (context, sizingInformation) => Scaffold(
-        drawer: sizingInformation.isMobile ? const NavigationDrawer() : null,
+        drawer: sizingInformation.deviceScreenType == DeviceScreenType.mobile
+            ? const NavigationDrawer()
+            : null,
         backgroundColor: Colors.white,
         body: CenteredView(
           child: Column(
@@ -34,5 +35,20 @@ class LayoutTemplate extends StatelessWidget {
         ),
       ),
     );
+  }
+}
+
+class CenteredView extends StatelessWidget {
+  final Widget child;
+
+  const CenteredView({Key? key, required this.child}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+        padding: const EdgeInsets.symmetric(horizontal: 70, vertical: 70),
+        alignment: Alignment.topCenter,
+        child: ConstrainedBox(
+            constraints: const BoxConstraints(maxWidth: 1200), child: child));
   }
 }
